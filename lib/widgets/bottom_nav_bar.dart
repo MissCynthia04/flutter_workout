@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatelessWidget {
-  const BottomNavBar({super.key});
+  final int index;
+  const BottomNavBar({super.key, required this.index});
+
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class BottomNavBar extends StatelessWidget {
         unselectedItemColor: const Color.fromARGB(255, 133, 132, 132),
         selectedIconTheme: IconThemeData(color: const Color.fromARGB(255, 0, 0, 0)),
         unselectedIconTheme: IconThemeData(color: const Color.fromARGB(255, 126, 124, 124)),
-        currentIndex: 0,
+        currentIndex: index,
         selectedLabelStyle: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
         // Set label color when selected
         unselectedLabelStyle: TextStyle(color: const Color.fromARGB(255, 122, 121, 121)),
