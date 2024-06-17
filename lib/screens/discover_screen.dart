@@ -7,7 +7,9 @@ class DiscoverScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Center(child: Text("BOTTOMS"),),
-      bottomNavigationBar: BottomNavBar());
+        body: Center(
+          child: Text("BOTTOMS"),
+        ),
+        bottomNavigationBar: BottomNavBar());
   }
 }
