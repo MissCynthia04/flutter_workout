@@ -18,7 +18,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/page_training': (context) => HomeScreen(),
         '/page_discover': (context) => DiscoverScreen(),
-        '/page_reports': (context) => ReportsScreen(),
+        '/page_reports': (context) => MyApp(),
         '/page_settings': (context) => SettingsScreen(),
 
 
