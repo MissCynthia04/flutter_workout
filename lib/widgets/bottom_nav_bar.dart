@@ -8,17 +8,17 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-        items:[
+        items:const[
            BottomNavigationBarItem(
-            icon: Icon(Icons.model_training),
+            icon: Icon(Icons.flash_on),
             label: "Taining",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.discount),
+            icon: Icon(Icons.explore),
             label: "Discover",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.report),
+            icon: Icon(Icons.bar_chart),
             label: "Reports",
           ),
           BottomNavigationBarItem(
