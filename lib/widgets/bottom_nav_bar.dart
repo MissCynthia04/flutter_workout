@@ -1,7 +1,12 @@
+import 'package:buttocks_workout/screens/discover_screen.dart';
+import 'package:buttocks_workout/screens/home_screen.dart';
+import 'package:buttocks_workout/screens/reports_screen.dart';
+import 'package:buttocks_workout/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatelessWidget {
-  const BottomNavBar({super.key});
+  final int index;
+  const BottomNavBar({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +37,7 @@ class BottomNavBar extends StatelessWidget {
             IconThemeData(color: const Color.fromARGB(255, 0, 0, 0)),
         unselectedIconTheme:
             IconThemeData(color: const Color.fromARGB(255, 126, 124, 124)),
-        currentIndex: 0,
+        currentIndex: index,
         selectedLabelStyle:
             TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
         // Set label color when selected
@@ -44,16 +49,40 @@ class BottomNavBar extends StatelessWidget {
         onTap: (int i) {
           switch (i) {
             case 0:
-              Navigator.pushNamed(context, '/page_training');
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => HomeScreen(),
+                ),
+                (Route<dynamic> route) => false,
+              );
               break;
             case 1:
-              Navigator.pushNamed(context, '/page_discover');
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => DiscoverScreen(),
+                ),
+                (Route<dynamic> route) => false,
+              );
               break;
             case 2:
-              Navigator.pushNamed(context, '/page_reports');
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => ReportsScreen(),
+                ),
+                (Route<dynamic> route) => false,
+              );
               break;
             case 3:
-              Navigator.pushNamed(context, '/page_settings');
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SettingsScreen(),
+                ),
+                (Route<dynamic> route) => false,
+              );
               break;
           }
         });
