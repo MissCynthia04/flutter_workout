@@ -1,7 +1,5 @@
-import 'package:buttocks_workout/screens/discover_screen.dart';
 import 'package:buttocks_workout/screens/home_screen.dart';
-import 'package:buttocks_workout/screens/reports_screen.dart';
-import 'package:buttocks_workout/screens/settings_screen.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,15 +12,16 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomeScreen(),
-      routes: {
-        '/page_training': (context) => HomeScreen(),
-        '/page_discover': (context) => DiscoverScreen(),
-        '/page_reports': (context) => MyApp(),
-        '/page_settings': (context) => SettingsScreen(),
+      // routes: {
+      //   '/page_training': (context) => HomeScreen(),
+      //   '/page_discover': (context) => DiscoverScreen(),
+      //   '/page_reports': (context) => MyApp(),
+      //   '/page_settings': (context) => SettingsScreen(),
 
 
-      },
+      // },
     );
 
   }

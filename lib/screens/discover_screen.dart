@@ -1,3 +1,4 @@
+import 'package:buttocks_workout/screens/every_day_new_screen.dart';
 import 'package:buttocks_workout/widgets/body_focus.dart';
 import 'package:buttocks_workout/widgets/bottom_nav_bar.dart';
 import 'package:buttocks_workout/widgets/collections.dart';
@@ -5,6 +6,7 @@ import 'package:buttocks_workout/widgets/duration.dart';
 import 'package:buttocks_workout/widgets/picks_for_you_details.dart';
 import 'package:buttocks_workout/widgets/training_goal.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({super.key});
@@ -27,46 +29,54 @@ class DiscoverScreen extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
-                Container(
-                  height: 220,
-                  width: 325,
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(12.0)),
-                      color: Colors.amber
-                      //image: DecorationImage(image: AssetImage("assets/images/image1.jpg"), fit: BoxFit.cover,),
-                      ),
-                  child: const Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(
-                            top: 45.0, bottom: 45.0, right: 40.0),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [Icon(Icons.apple)],
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const EveryDayNewScreen()));
+                  },
+                  child: Container(
+                    height: 220,
+                    width: 325,
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(12.0)),
+                        color: Colors.amber
+                        //image: DecorationImage(image: AssetImage("assets/images/image1.jpg"), fit: BoxFit.cover,),
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            left: 16.0, bottom: 10.0, top: 10.0),
-                        child: Text(
-                          "Butt & abs workout",
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: 45.0, bottom: 45.0, right: 40.0),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: [Icon(Icons.apple)],
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 16.0),
-                        child:
-                            Text("Burn belly fat and tone your butt. Achieve"),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 16.0),
-                        child: Text("more with less effort."),
-                      )
-                    ],
+                        Padding(
+                          padding: EdgeInsets.only(
+                              left: 16.0, bottom: 10.0, top: 10.0),
+                          child: Text(
+                            "Butt & abs workout",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 16.0),
+                          child:
+                              Text("Burn belly fat and tone your butt. Achieve"),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 16.0),
+                          child: Text("more with less effort."),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 const Padding(
