@@ -1,3 +1,4 @@
+import 'package:buttocks_workout/screens/view1_day1.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
@@ -15,58 +16,66 @@ class PageView1 extends StatelessWidget {
         ),
         Card(
             color: Color.fromARGB(255, 252, 70, 97),
-            child: SizedBox(
-              height: 300,
-              width: size.width,
-              child: Column(
-                children: [
-                  SizedBox(
-                    height: 30,
-                  ),
-                  SizedBox(
-                      height: 110,
-                      width: size.width * 0.9,
-                      child: Text(
-                        "ENTRAÎNEMENT \nJAMBES & FESSIERS",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 25,
-                            color: Colors.white),
-                      )),
-                  SizedBox(
-                      height: 90,
-                      width: size.width * 0.9,
-                      child: Text(
-                        "Gardez en forme",
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      )),
-                  SizedBox(
+            child: InkWell(
+              splashColor: Color.fromARGB(255, 254, 132, 152),
+              onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => View1Day1(),
+                  )),
+              child: SizedBox(
+                height: 300,
+                width: size.width,
+                child: Column(
+                  children: [
+                    SizedBox(
                       height: 30,
-                      width: size.width * 0.9,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "30 jours restants",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          Text(
-                            "0.0%",
-                            style: TextStyle(color: Colors.white),
-                          )
-                        ],
-                      )),
-                  SizedBox(
-                    width: size.width * 0.95,
-                    child: LinearPercentIndicator(
-                      width: size.width * 0.95,
-                      lineHeight: 5.0,
-                      percent: 0.0,
-                      backgroundColor: Colors.grey,
-                      progressColor: Colors.white,
                     ),
-                  ),
-                ],
+                    SizedBox(
+                        height: 110,
+                        width: size.width * 0.9,
+                        child: Text(
+                          "ENTRAÎNEMENT \nJAMBES & FESSIERS",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                              color: Colors.white),
+                        )),
+                    SizedBox(
+                        height: 90,
+                        width: size.width * 0.9,
+                        child: Text(
+                          "Gardez en forme",
+                          style: TextStyle(fontSize: 20, color: Colors.white),
+                        )),
+                    SizedBox(
+                        height: 30,
+                        width: size.width * 0.9,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "30 jours restants",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              "0.0%",
+                              style: TextStyle(color: Colors.white),
+                            )
+                          ],
+                        )),
+                    SizedBox(
+                      width: size.width * 0.95,
+                      child: LinearPercentIndicator(
+                        width: size.width * 0.95,
+                        lineHeight: 5.0,
+                        percent: 0.0,
+                        backgroundColor: Colors.grey,
+                        progressColor: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             )),
         SizedBox(
