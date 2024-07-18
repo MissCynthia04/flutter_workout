@@ -1,10 +1,17 @@
+import 'package:buttocks_workout/screens/Special_screen.dart';
+import 'package:buttocks_workout/screens/bikini_ready_screen.dart';
+import 'package:buttocks_workout/screens/compound_workout_screen.dart';
 import 'package:buttocks_workout/screens/every_day_new_screen.dart';
+import 'package:buttocks_workout/screens/for_beginners_screen.dart';
+import 'package:buttocks_workout/screens/running_enthusiast.dart';
+import 'package:buttocks_workout/screens/seven_min_workout_screen.dart';
 import 'package:buttocks_workout/widgets/body_focus.dart';
 import 'package:buttocks_workout/widgets/bottom_nav_bar.dart';
 import 'package:buttocks_workout/widgets/collections.dart';
 import 'package:buttocks_workout/widgets/duration.dart';
 import 'package:buttocks_workout/widgets/picks_for_you_details.dart';
 import 'package:buttocks_workout/widgets/training_goal.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -34,7 +41,7 @@ class DiscoverScreen extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const EveryDayNewScreen()));
+                            builder: (context) => const DetailPage()));
                   },
                   child: Container(
                     height: 220,
@@ -95,27 +102,80 @@ class DiscoverScreen extends StatelessWidget {
                     height: 130,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
-                      children: const [
-                        Collections(
-                          titre: '7 min workout',
-                          image: 'assets/images/3.jpg',
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SevenMinWorkout()));
+                          },
+                          child: const Collections(
+                            titre: '7 min workout',
+                            image: 'assets/images/3.jpg',
+                          ),
                         ),
-                        Collections(
-                          titre: '7 min workout',
-                          image: 'assets/images/3.jpg',
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ForBeginnersScreen()));
+                          },
+                          child: const Collections(
+                            titre: 'For beginners',
+                            image: 'assets/images/3.jpg',
+                          ),
                         ),
-                        Collections(
-                          titre: '7 min workout',
-                          image: 'assets/images/3.jpg',
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const BikiniReadyScreen()));
+                          },
+                          child: const Collections(
+                            titre: 'Bikini ready',
+                            image: 'assets/images/3.jpg',
+                          ),
                         ),
-                        Collections(
-                          titre: '7 min workout',
-                          image: 'assets/images/3.jpg',
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const CompoundWorkoutScreen()));
+                          },
+                          child: const Collections(
+                            titre: 'Compound workout',
+                            image: 'assets/images/3.jpg',
+                          ),
                         ),
-                        Collections(
-                          titre: '7 min workout',
-                          image: 'assets/images/3.jpg',
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const RunningEnthusiastScreen()));
+                          },
+                          child: const Collections(
+                            titre: 'Running enthusiast',
+                            image: 'assets/images/3.jpg',
+                          ),
                         ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SpecialScreen()));
+                          },
+                          child: const Collections(
+                            titre: 'Special',
+                            image: 'assets/images/3.jpg',
+                          ),
+                        ),
+                        
                       ],
                     ),
                   ),
@@ -136,27 +196,51 @@ class DiscoverScreen extends StatelessWidget {
                     height: 260,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
-                      children: const [
+                      children:  [
                         Padding(
                           padding: EdgeInsets.only(right: 16.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              PicksForYouDetails(
-                                image: 'assets/images/3.jpg',
-                                title: 'Legs & butt workout',
-                                subtitle: 'Target your booty, combine a th..',
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SpecialScreen()));
+                                },
+                                child: const PicksForYouDetails(
+                                  image: 'assets/images/3.jpg',
+                                  title: 'Legs & butt workout',
+                                  subtitle: 'Target your booty, combine a th..',
+                                ),
                               ),
-                              PicksForYouDetails(
-                                image: 'assets/images/3.jpg',
-                                title: 'Legs & butt workout',
-                                subtitle: 'Target your booty, combine a th..',
+                               GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SpecialScreen()));
+                                },
+                                child: const PicksForYouDetails(
+                                  image: 'assets/images/3.jpg',
+                                  title: 'Legs & butt workout',
+                                  subtitle: 'Target your booty, combine a th..',
+                                ),
                               ),
-                              PicksForYouDetails(
-                                image: 'assets/images/3.jpg',
-                                title: 'Legs & butt workout',
-                                subtitle: 'Target your booty, combine a th..',
+                               GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SpecialScreen()));
+                                },
+                                child: const PicksForYouDetails(
+                                  image: 'assets/images/3.jpg',
+                                  title: 'Legs & butt workout',
+                                  subtitle: 'Target your booty, combine a th..',
+                                ),
                               ),
                             ],
                           ),
@@ -167,20 +251,44 @@ class DiscoverScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              PicksForYouDetails(
-                                image: 'assets/images/3.jpg',
-                                title: 'Legs & butt workout',
-                                subtitle: 'Target your booty, combine a th..',
+                               GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SpecialScreen()));
+                                },
+                                child: const PicksForYouDetails(
+                                  image: 'assets/images/3.jpg',
+                                  title: 'Legs & butt workout',
+                                  subtitle: 'Target your booty, combine a th..',
+                                ),
                               ),
-                              PicksForYouDetails(
-                                image: 'assets/images/3.jpg',
-                                title: 'Legs & butt workout',
-                                subtitle: 'Target your booty, combine a th..',
+                               GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SpecialScreen()));
+                                },
+                                child: const PicksForYouDetails(
+                                  image: 'assets/images/3.jpg',
+                                  title: 'Legs & butt workout',
+                                  subtitle: 'Target your booty, combine a th..',
+                                ),
                               ),
-                              PicksForYouDetails(
-                                image: 'assets/images/3.jpg',
-                                title: 'Legs & butt workout',
-                                subtitle: 'Target your booty, combine a th..',
+                               GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const SpecialScreen()));
+                                },
+                                child: const PicksForYouDetails(
+                                  image: 'assets/images/3.jpg',
+                                  title: 'Legs & butt workout',
+                                  subtitle: 'Target your booty, combine a th..',
+                                ),
                               ),
                             ],
                           ),

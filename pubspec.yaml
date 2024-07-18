@@ -7,7 +7,9 @@ environment:
   sdk: '>=3.3.3 <4.0.0'
 
 dependencies:
+  appbar_animated: ^0.0.3
   d_chart: ^2.6.9
+  fadable_app_bar: ^0.0.3
   flutter:
     sdk: flutter
   mrx_charts: ^0.1.3
